@@ -37,21 +37,21 @@
     <div class="card bg-base-100 shadow">
         <div class="card-body">
                 <h3 class="text-lg font-medium">Total Jobs</h3>
-                <p id="total-jobas" class="text-3xl font-bold mt-2">8</p>
+                <p id="totalJobs" class="text-3xl font-bold mt-2">8</p>
         </div>
     </div>
     <!-- Interview card -->
     <div class="card bg-base-100 shadow">
         <div class="card-body">
                 <h3 class="text-lg font-medium">Interview</h3>
-                <p class="text-3xl font-bold mt-2">0</p>
+                <p id="interviewCount" class="text-3xl font-bold mt-2">0</p>
         </div>
     </div>
     <!-- Rejected Card -->
      <div class="card bg-base-100 shadow">
         <div class="card-body">
                 <h3 class="text-lg font-medium">Rejected</h3>
-                <p class="text-3xl font-bold mt-2">0</p>
+                <p id="rejectedCount" class="text-3xl font-bold mt-2">0</p>
         </div>
     </div>
 </div>
@@ -62,172 +62,184 @@
 <section id="jobs-btn" class="mb-6">
     <div class="flex justify-between items-center mb-4">
   <h3 class="text-xl font-bold">Available Jobs</h3>
-  <span class="badge badge-primary badge-lg">8 Jobs</span>
+  <span id="jobsBadge" class="badge badge-primary badge-lg">8 Jobs</span>
 </div>
   <div class="flex gap-3">
-    <button class="btn btn-soft btn-primary">All</button>
-    <button class="btn btn-soft btn-primary">Interview</button>
-    <button class="btn btn-soft btn-primary">Rejected</button>
+    <button id="tab-all" class="btn btn-soft btn-primary">All</button>
+    <button id="tab-interview" class="btn btn-soft btn-primary">Interview</button>
+    <button id="tab-rejected" class="btn btn-soft btn-primary">Rejected</button>
   </div>
 </section>
 
 <!-- Available Jobs Card Section  -->
 <Section class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <!-- Card-1  -->
-     <div class="card bg-base-100 shadow">
+     <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">GreenSoft Systems</h3>
       <p class="text-sm text-gray-500">IT Support Engineer</p>
       <p class="text-sm text-gray-500 mt-2">Sylhet • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Provide technical support, troubleshoot hardware and software issues,assist employees with IT-related problems.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-2  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">CodeCraft Ltd</h3>
       <p class="text-sm text-gray-500">Backend Developer</p>
       <p class="text-sm text-gray-500 mt-2">Dhaka • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Work with server-side logic, REST APIs, and databases. Ensure secure and scalable backend services for web applications.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-3  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">TechNova Solutions</h3>
       <p class="text-sm text-gray-500">Frontend Developer</p>
       <p class="text-sm text-gray-500 mt-2">CoxBazar • Half-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Develop responsive web interfaces using HTML, Tailwind CSS, and JavaScript. Focus on performance and accessibility across devices.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-4  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">NextGen IT</h3>
       <p class="text-sm text-gray-500">UI/UX Designer</p>
       <p class="text-sm text-gray-500 mt-2">Remote • Full-time • $70,000 – $95,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Analyze large datasets to generate insights and reports. Use tools like Excel, SQL, and basic Python for data processing.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-5  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">DataPulse Analytics</h3>
       <p class="text-sm text-gray-500">Data Analyst</p>
       <p class="text-sm text-gray-500 mt-2">Sylhet • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Manage CI/CD pipelines, cloud infrastructure, and deployment processes. Ensure system reliability and scalability.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-6  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">NextGen IT</h3>
       <p class="text-sm text-gray-500">UI/UX Designer</p>
       <p class="text-sm text-gray-500 mt-2">Cumilla • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Analyze large datasets to generate insights and reports. Use tools like Excel, SQL, and basic Python for data processing.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card - 7  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">Gorer Bazar</h3>
       <p class="text-sm text-gray-500">Social Media Creator</p>
       <p class="text-sm text-gray-500 mt-2">Dhaka • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Design clean and user-friendly interfaces. Work closely with developers to convert designs into functional user experiences.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
 <!-- Card-8  -->
- <div class="card bg-base-100 shadow">
+ <div class="card bg-base-100 shadow job-card" data-status="not-applied">
   <div class="card-body flex-row justify-between gap-4">
     <div>
       <h3 class="text-lg font-semibold">IT Q Solution</h3>
       <p class="text-sm text-gray-500">Marketing Support Engineer</p>
       <p class="text-sm text-gray-500 mt-2">Sylhet • Full-time • $30,000 - $45,000</p>
-      <button class="btn btn-outline btn-sm mt-3">Not Applied</button>
+      <button class="btn btn-outline btn-sm mt-3 status-text">Not Applied</button>
       <p class="mt-3 text-sm">Analyze large datasets to generate insights and reports. Use tools like Excel, SQL, and basic Python for data processing.</p>
       <div class="mt-4 flex gap-2">
-        <button class="btn btn-success btn-sm">Interview</button>
-        <button class="btn btn-error btn-sm">Rejected</button>
+        <button class="btn btn-success btn-sm btn-interview">Interview</button>
+        <button class="btn btn-error btn-sm btn-rejected">Rejected</button>
       </div>
     </div>
-    <button class="flex justify-between">
+    <button class="flex justify-between text-error text-lg btn-delete">
       <i class="fa-solid fa-trash-can"></i>
     </button>
   </div>
 </div>
+
+<!-- No Jobs Message -->
+  <div id="noJobs" class="hidden col-span-full text-center mt-10">
+    <img class="w-40 mx-auto mb-4" src="./img/jobs.png" alt="">
+    <p class="text-lg font-semibold text-gray-500">
+      No Jobs Available
+    </p>
+    <p class="text-gray-400">
+      Check back soon for new job opportunities
+    </p>
+  </div>
+
 </Section>
 
 
-
+<script src="./SCRIPT/script.js"></script>
 </body>
 </html>
