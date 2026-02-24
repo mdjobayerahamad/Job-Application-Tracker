@@ -1,6 +1,4 @@
-// Dashboard element ধরা
-
-
+// Dashboard element
 const totalJobsEl = document.getElementById("totalJobs");
 const interviewCountEl = document.getElementById("interviewCount");
 const rejectedCountEl = document.getElementById("rejectedCount");
